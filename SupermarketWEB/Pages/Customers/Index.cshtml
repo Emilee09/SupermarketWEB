@@ -1,16 +1,16 @@
 ﻿@page
 @model SupermarketWEB.Pages.Customers.IndexModel
 @{
-    ViewData["Title"] = "Index Customers";
+    ViewData["Title"] = "Customers";
 }
-<h1>Index Customers</h1>
+<h1 class="my-4">Customers</h1>
 
 <p>
-    <a asp-page="Create" class="btn btn-success">Create New</a>
+    <a asp-page="Create" class="btn btn-success"><i class="fas fa-plus-circle"></i> Create New</a>
 </p>
 
-<table class="table">
-    <thead>
+<table class="table table-hover">
+    <thead class="thead-light">
         <tr>
             <th>@Html.DisplayNameFor(model => model.Customers[0].Document)</th>
             <th>@Html.DisplayNameFor(model => model.Customers[0].First_Name)</th>
@@ -19,7 +19,7 @@
             <th>@Html.DisplayNameFor(model => model.Customers[0].Birthday)</th>
             <th>@Html.DisplayNameFor(model => model.Customers[0].Phone)</th>
             <th>@Html.DisplayNameFor(model => model.Customers[0].Email)</th>
-            <th>Actions</th>
+            <th class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -33,13 +33,19 @@
                 <td>@Html.DisplayFor(modelItem => item.Birthday)</td>
                 <td>@Html.DisplayFor(modelItem => item.Phone)</td>
                 <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                <td class="text-center">
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning mx-1">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger mx-1">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+
 
 
