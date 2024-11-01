@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace SupermarkerEF.Data
 {
@@ -15,7 +16,9 @@ namespace SupermarkerEF.Data
         {
         }
 
-		public DbSet<Customer> Customers { get; set; }
+        public DbSet<PayMode> PayModes { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
 
 		public DbSet<Product> Products { get; set; }
 
