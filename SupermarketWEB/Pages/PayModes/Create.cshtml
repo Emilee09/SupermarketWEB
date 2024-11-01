@@ -1,0 +1,38 @@
+﻿@page
+@model SupermarketWEB.Pages.PayModes.CreateModel
+@{
+    ViewData["Title"] = "Create PayMode";
+}
+<h1 class="my-4">Create New PayMode</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="PayMode.Name" class="control-label"></label>
+                <input asp-for="PayMode.Name" class="form-control" placeholder="Enter pay mode name" />
+                <span asp-validation-for="PayMode.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PayMode.Observation" class="control-label"></label>
+                <input asp-for="PayMode.Observation" class="form-control" placeholder="Add any observations" />
+                <span asp-validation-for="PayMode.Observation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-success"><i class="fas fa-check-circle"></i> Create</button>
+                <a asp-page="Index" class="btn btn-primary ms-2"><i class="fas fa-arrow-left"></i> Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
