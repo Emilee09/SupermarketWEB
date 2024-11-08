@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using SupermarketWEB.Model;
 
-namespace SupermarkerEF.Data
+namespace SupermarketWEB.Data
 {
     public class SupermarketContext : DbContext
     {

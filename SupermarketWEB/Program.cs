@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SupermarkerEF.Data;
+using SupermarketWEB.Data;
 
 namespace SupermarketWEB
 {
